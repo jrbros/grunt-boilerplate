@@ -125,10 +125,32 @@ module.exports = function(grunt) {
             build: {
                 src: ['build']
             }
+        },
+
+        copy: {
+            main: {
+                expand: true,
+                cwd: 'src',
+                src: 'img/*',
+                dest: 'build/'
+            }
+        },
+
+        imagemin: {
+            dist: {
+                options: {
+                    optimizationLevel: 5
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'build/',
+                    src: ['img/**/*.{png,jpg,gif}'],
+                    dest: 'build/'
+                }]
+            }
         }
 
     });
-
 
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -138,15 +160,16 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-w3c-html-validation');
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-cssnano');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     // Default task(s).
     grunt.registerTask('default', ['dev', 'connect', 'watch']);
 
     // Init dev task(s).
-    grunt.registerTask('dev', ['clean', 'jade:dev', 'validation', 'postcss']);
+    grunt.registerTask('dev', ['clean', 'copy', 'jade:dev', 'validation', 'postcss']);
 
     // Prod task(s).
-    grunt.registerTask('prod', ['clean', 'jade:prod', 'validation', 'postcss', 'csslint', 'cssnano']);
-
+    grunt.registerTask('prod', ['clean', 'copy', 'imagemin', 'jade:prod', 'validation', 'postcss', 'csslint', 'cssnano']);
 
 };
