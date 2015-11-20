@@ -1,0 +1,45 @@
+h1, h2 {
+    margin: 0;
+}
+h1 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+h2 {
+    font-size: 1.6rem;
+    color: var(--grayColor);
+}
+
+h2 + p {
+    margin-top: 1.5rem;
+}
+
+h2 + a {
+    margin-top: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+p {
+    font-weight: 300;
+}
+
+
+@media (--medium-viewport) {
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size:2.2rem;
+    }
+
+    .Column--left p {
+        width: 70%;
+    }
+
+}

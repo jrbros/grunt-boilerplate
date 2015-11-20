@@ -69,7 +69,10 @@ module.exports = function(grunt) {
                 processors: [
                     require('postcss-import')(),
                     require('autoprefixer')(),
-                    require('cssnext')()
+                    require('cssnext')(),
+                    require('postcss-url')({
+                        url: 'rebase'
+                    })
                 ]
             },
             files: {
@@ -113,8 +116,22 @@ module.exports = function(grunt) {
                 }
             },
             css: {
-                files: ['src/css/style.css'],
+                files: ['src/css/style.css', 'src/css/**/*.css'],
                 tasks: ['postcss'],
+                options: {
+                    spawn: false
+                }
+            },
+            img: {
+                files: ['src/img/**/*'],
+                tasks: ['copy'],
+                options: {
+                    spawn: false
+                }
+            },
+            js: {
+                files: ['src/js/**/*'],
+                tasks: ['uglify'],
                 options: {
                     spawn: false
                 }
@@ -131,7 +148,7 @@ module.exports = function(grunt) {
             main: {
                 expand: true,
                 cwd: 'src',
-                src: 'img/*',
+                src: ['img/*', 'img/**/*', 'fonts/**/*'],
                 dest: 'build/'
             }
         },
@@ -148,8 +165,15 @@ module.exports = function(grunt) {
                     dest: 'build/'
                 }]
             }
-        }
+        },
 
+        uglify: {
+            my_target: {
+                files: {
+                    'build/js/main.js': ['src/js/*.js']
+                }
+            }
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-connect');
@@ -162,12 +186,17 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-cssnano');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-webfont');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // Default task(s).
     grunt.registerTask('default', ['dev', 'connect', 'watch']);
 
     // Init dev task(s).
-    grunt.registerTask('dev', ['clean', 'copy', 'jade:dev', 'validation', 'postcss']);
+    grunt.registerTask('dev', ['clean', 'copy', 'jade:dev', 'validation', 'postcss', 'uglify']);
+
+    // Code quality task(s).
+    grunt.registerTask('quality', ['validation', 'csslint']);
 
     // Prod task(s).
     grunt.registerTask('prod', ['clean', 'copy', 'imagemin', 'jade:prod', 'validation', 'postcss', 'csslint', 'cssnano']);

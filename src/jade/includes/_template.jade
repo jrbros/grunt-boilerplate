@@ -9,9 +9,10 @@ html(lang="fr")
         meta(name="viewport" content="width=device-width initial-scale=1")
         link(href="img/favicon.png" rel="shortcut icon")
         link(rel="stylesheet" type="text/css" href="style.css")
-    body
+    body(id="Site")
         include _header.jade
         main
             block content
 
         include _footer.jade
+        script(src="js/main.js")

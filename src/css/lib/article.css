@@ -1,0 +1,28 @@
+.Article {
+    flex: 1 0;
+}
+
+.Article:not(:last-child) {
+    padding-bottom: 4rem;
+}
+
+.Article__copy {
+    margin-bottom: 1.5rem;
+}
+
+.Article__button {
+    padding: 0.8rem 1.8rem;
+    font-size: 0.9rem;
+}
+
+@media (--medium-viewport) {
+
+    .Article {
+        padding: 0 1rem;
+    }
+
+    .Article:not(:last-child) {
+        padding-bottom: 0;
+    }
+
+}

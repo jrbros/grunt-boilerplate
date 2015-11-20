@@ -1,12 +1,56 @@
-extends includes/_template.jade
-
+extends includes/_template
 block variables
-    - var pageTitle = "Grunt boilerplate"
-    - var pageDesc = "Grunt boilerplate"
-
+- var pageTitle = "Nativious"
+- var pageDesc = "Nativious"
 block content
-    .container
-        header
-            h1 Title
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam venenatis placerat erat dapibus accumsan. Proin vitae accumsan mi, ac ultrices ligula. Praesent sit amet nunc dictum, eleifend neque eget, cursus quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla non dolor congue, egestas massa eget, porttitor leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin facilisis, augue eu rutrum rutrum, felis erat laoreet magna, vel bibendum eros urna sed augue.
-            | Nulla mollis faucibus lacus, eget facilisis tortor aliquet vel. Sed gravida fringilla eros, ut posuere ligula convallis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse faucibus fringilla elit, nec auctor libero tempor eu. Sed maximus ligula in cursus blandit. Nam bibendum elit quis urna volutpat, vitae accumsan turpis faucibus. Integer dictum eget augue nec sodales.
+    section(class="Hero-unit")
+        .container
+            header
+                h1 Grunt boilerplate
+            a(class="Button Button--primary Hero-unit__button" title="Découvrir" href="#") Button
+    section(class="Section")
+        .Column.container
+            header
+                h2 Heading
+            p(class="Section__copy--lead") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis augue eu tempus tristique. Sed nec suscipit ante. Aliquam commodo vitae ex vel ultrices. Sed vel mattis sem.
+    section(class="Section Section--colored-primary")
+        .Row.container
+            article(class="Article")
+                header
+                    h3 Heading
+                p(class="Article__copy") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis augue eu tempus tristique.
+                a(class="Article__button Button Button--secondary" title="Button" href="#") Button
+            article(class="Article")
+                header
+                    h3 Heading
+                p(class="Article__copy") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis augue eu tempus tristique.
+                a(class="Article__button Button Button--secondary" title="Button" href="#") Button
+            article(class="Article")
+                header
+                    h3 Heading
+                p(class="Article__copy") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis augue eu tempus tristique.
+                a(class="Article__button Button Button--secondary" title="Button" href="#") Button
+    section(class="Section")
+        .Column.container
+            header
+                h2 Heading
+            p(class="Section__copy--lead") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis augue eu tempus tristique.
+                br
+                | Technologie, savoir-faire, performance : le nôtre.
+    section(class="Section Section--colored-secondary")
+        .Row.container
+            article(class="Article")
+                header
+                    h3 Heading
+                p(class="Article__copy") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis augue eu tempus tristique.
+                a(class="Article__button Button Button--secondary" title="Button" href="#") Button
+            article(class="Article")
+                header
+                    h3 Heading
+                p(class="Article__copy") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis augue eu tempus tristique.
+                a(class="Article__button Button Button--secondary" title="Button" href="#") Button
+    section(class="Section")
+        .Column.container
+            h2 Heading
+            a(class="Button Button--dark" title="Button" href="#") Button
+                      

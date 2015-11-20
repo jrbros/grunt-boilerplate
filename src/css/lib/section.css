@@ -1,0 +1,47 @@
+.Section {
+    padding: 3em 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.Section--grey {
+    background-color: #f5f5f5;
+}
+
+.Section--colored-primary {
+    color: #ffffff;
+    background-color: var(--secondaryColor);
+}
+
+.Section--colored-secondary {
+    color: #ffffff;
+    background-color: var(--secondaryColor);
+}
+
+.Section__copy--lead {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    max-width: 100%;
+}
+
+.Section__heading--primary {
+    font-size: 1.8rem;
+}
+
+.Section__heading--secondary {
+    font-size: 1.6rem;
+}
+
+@media (--medium-viewport) {
+
+    .Section {
+        padding: 6em 0;
+    }
+
+    .Section__copy--lead {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        max-width: 70%;
+    }
+
+}

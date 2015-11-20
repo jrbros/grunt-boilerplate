@@ -1,0 +1,44 @@
+.Button {
+    border: 1px solid #fff;
+    font-size: 1.1rem;
+    padding: 1rem 3rem;
+    background: none;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    color: #ffffff;
+    border-radius: 70px;
+    cursor: pointer;
+}
+
+.Button--primary:hover {
+    background-color: #ffffff;
+    color: var(--primaryColor);
+}
+
+.Button--secondary:hover {
+    background-color: #ffffff;
+    color: var(--secondaryColor);
+}
+
+.Button--dark {
+    color: var(--grayColor);
+    border-color: var(--grayColor);
+}
+
+.Button--dark:hover {
+    color: #ffffff;
+    background-color: var(--grayColor);
+}
+
+.Button--menu {
+    padding: 0.2rem 0.6rem;
+}
+
+@media (--medium-viewport) {
+
+    .Button--menu {
+        display: none;
+    }
+
+}

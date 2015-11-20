@@ -1,55 +1,10 @@
 @import 'lib/normalize.css';
-
-html {
-    box-sizing: border-box;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-:root {
-    --gray: gray;
-}
-
-@custom-media --large-viewport (min-width: 75em);
-
-.container {
-    width: 100%;
-}
-
-@media (--large-viewport) {
-    .container {
-        margin: 0 auto;
-        width: 75em;
-    }
-}
-
-body > header .container, footer .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-body > header, footer {
-    background-color: var(--gray);
-}
-
-ul {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-    padding-left: 0;
-}
-
-li {
-    list-style: none;
-}
-
-ul li a {
-    padding: 0 1em;
-}
-
-main {
-    padding: 1em 0;
-}
-
+@import 'lib/variables.css';
+@import 'lib/custom-media.css';
+@import 'lib/global.css';
+@import 'lib/typography.css';
+@import 'lib/nav.css';
+@import 'lib/banner.css';
+@import 'lib/section.css';
+@import 'lib/article.css';
+@import 'lib/buttons.css';

@@ -1,0 +1,103 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--grayColor);
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: z-index 0.2s linear;
+    z-index: -10;
+}
+
+body.Menu--isOpen:before  {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.Header {
+    background-color: #ffffff;
+    padding: 0.5rem 0;
+    left: 0;
+    transition: left 0.3s linear;
+}
+
+.Logo {
+    text-decoration: none;
+    color: var(--grayColor);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.container {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.Column, .Row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Header .container, .Footer .container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header .Row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Footer .container {
+    justify-content: center;
+}
+
+.Footer {
+    color: #aaaaaa;
+    padding: 1rem 0;
+    background-color: var(--grayColor);
+}
+
+@media (--large-viewport) {
+    .container {
+        margin: 0 auto;
+        width: 1200px;
+    }
+}
+
+@media (--medium-viewport) {
+
+    .container {
+        padding: 0;
+    }
+
+    .Row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .Footer .container {
+        justify-content: space-between;
+    }
+
+}

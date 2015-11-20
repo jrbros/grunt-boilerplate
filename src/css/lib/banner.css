@@ -1,0 +1,17 @@
+.Hero-unit {
+    padding: 5rem 0;
+    background-color: var(--primaryColor);
+}
+
+.Hero-unit__button {
+    margin-top: 1.5rem;
+}
+
+@media (--large-viewport) {
+
+    .Hero-unit {
+        text-align: left;
+        padding: 13rem 0;
+    }
+
+}

@@ -12,7 +12,10 @@
   "keywords": [
     "grunt",
     "website",
-    "boilerplate"
+    "boilerplate",
+    "jade",
+    "cssnext",
+    "postcss"
   ],
   "author": "Jeremy Raffin @JeremyRaffin, Estelle Doreau @Estelle_Doreau",
   "license": "MIT",
@@ -30,10 +33,12 @@
     "grunt-contrib-csslint": "^0.5.0",
     "grunt-contrib-imagemin": "^0.9.4",
     "grunt-contrib-jade": "^0.15.0",
+    "grunt-contrib-uglify": "^0.10.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-cssnano": "^2.0.1",
     "grunt-postcss": "^0.7.0",
     "grunt-w3c-html-validation": "^0.1.6",
-    "postcss-import": "^7.1.0"
+    "postcss-import": "^7.1.0",
+    "postcss-url": "^5.0.2"
   }
 }

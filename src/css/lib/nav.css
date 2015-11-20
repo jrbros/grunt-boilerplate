@@ -1,0 +1,90 @@
+.Navigation {
+    width: 75%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100% !important;
+    background-color: var(--grayColor);
+    color: white;
+    right: -100%;
+    z-index: 1;
+    transition: right 0.3s ease-in-out;
+}
+
+.Menu--isOpen .Navigation {
+    right: 0;
+}
+
+.Navigation__list {
+    display: flex;
+    flex-flow: column wrap;
+    padding-left: 0;
+}
+
+.Navigation__item {
+    list-style: none;
+    padding: 1rem;
+}
+
+.Navigation__link {
+    text-decoration: none;
+    text-transform: none;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.Footer .Navigation {
+    display: none;
+}
+
+.Navigation__link--light {
+    font-size: 1rem;
+    color: #aaaaaa;
+    text-transform: none;
+    font-weight: 300;
+}
+
+@media (--medium-viewport) {
+
+    .Navigation {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        width: auto;
+        right: 0;
+        background-color: transparent;
+    }
+
+    .Navigation__list {
+        flex-flow: row wrap;
+        justify-content: flex-end;
+    }
+
+    .Navigation__item {
+        padding: 0 1rem;
+    }
+
+    .Header .Navigation__link {
+        color: var(--grayColor);
+        font-size: 1rem;
+    }
+
+    .Navigation__link:hover {
+        color: color(var(--grayColor) alpha(-30%));
+        transition: all 0.2s linear;
+    }
+
+    .Navigation__link:active {
+        border-bottom: 0;
+    }
+
+    .Footer .Navigation {
+        display: inline-block;
+        width: auto;
+    }
+
+    .Footer .Navigation__link:hover {
+        color: white;
+    }
+}
