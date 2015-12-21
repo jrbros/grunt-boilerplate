@@ -37,6 +37,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-cssnano": "^2.0.1",
     "grunt-postcss": "^0.7.0",
+    "grunt-uncss": "^0.4.4",
     "grunt-w3c-html-validation": "^0.1.6",
     "postcss-import": "^7.1.0",
     "postcss-url": "^5.0.2"
