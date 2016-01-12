@@ -50,12 +50,6 @@ body.Menu--isOpen:before  {
     padding-right: 1rem;
 }
 
-.Column, .Row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .Header .container, .Footer .container {
     justify-content: space-between;
     align-items: center;
@@ -69,6 +63,7 @@ body.Menu--isOpen:before  {
 
 .Footer .container {
     justify-content: center;
+    text-align: center;
 }
 
 .Footer {
@@ -90,10 +85,17 @@ body.Menu--isOpen:before  {
         padding: 0;
     }
 
-    .Row {
+    .Row, .Column {
         display: flex;
-        flex-direction: row;
         align-items: center;
+    }
+
+    .Row {
+        flex-direction: row;
+    }
+
+    .Column {
+        flex-direction: column;
     }
 
     .Footer .container {

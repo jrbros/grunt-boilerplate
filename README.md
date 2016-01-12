@@ -1,18 +1,32 @@
 # Grunt Boilerplate
-Tâches grunt et arborescence de base pour créer une page ou un site web.
+Grunt tasks for your next website project.
 
-### Ce qui est requis
+## Requirements
 - [Node.js](http://nodejs.org)
 - [Grunt](http://gruntjs.com/) : npm install -g grunt-cli
 
-### Ce qui est inclut
-- Un template HTML/CSS/JS responsive (mobile-first) de page d'accueil
-- Utilisation de flexbox pour la mise en page
-- [Jade](http://jade-lang.com/) pour le templating html
-- [PostCSS](https://github.com/postcss/postcss) et [cssnext](http://cssnext.io/) pour la gestion des fichiers CSS (import, variables ...)
-- Compression des images
-- Rechargement automatique du navigateur à la modification des fichiers sources
-- Vérification et validation du HTML et du CSS
+## Includes
 
-## Comment démarrer ?
-- Lancer la commande 'npm install' à la racine du projet
+### Template
+- Homepage responsive (mobile-first) template.
+- Flexbox layout.
+
+### Tasks
+- [Jade](http://jade-lang.com/) for Html templating
+- [PostCSS](https://github.com/postcss/postcss) and [cssnext](http://cssnext.io/) for variables, imports, auto-prefixing (...) in css files.
+- Images compression
+- Local server and live reload.
+- Html and Css validation
+
+## Getting started
+- Run <pre>npm install</pre>
+- Run <pre>grunt</pre>
+
+## Version
+
+1.0.0
+- Creation
+
+@JeremyRaffin
+
+### License MIT

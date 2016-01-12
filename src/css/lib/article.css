@@ -1,7 +1,3 @@
-.Article {
-    flex: 1 0;
-}
-
 .Article:not(:last-child) {
     padding-bottom: 4rem;
 }
@@ -18,6 +14,8 @@
 @media (--medium-viewport) {
 
     .Article {
+        flex: 1 0;
+        transition: opacity .5s;
         padding: 0 1rem;
     }
 
