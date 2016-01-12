@@ -19,8 +19,8 @@ Grunt tasks for your next website project.
 - Html and Css validation
 
 ## Getting started
-- Run <pre>npm install</pre>
-- Run <pre>grunt</pre>
+Set up <pre>npm install</pre>
+Run <pre>grunt</pre>
 
 ## Version
 
