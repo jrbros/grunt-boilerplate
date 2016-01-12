@@ -20,7 +20,8 @@ Grunt tasks for your next website project.
 
 ## Getting started
 Setup ```npm install````
-Run ``grunt``
+
+Run ```grunt``
 
 ## Version
 
